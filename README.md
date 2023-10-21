@@ -574,7 +574,7 @@ Backup Faucet:<a href="https://sepoliafaucet.com/" target="_blank"> https://sepo
     -   [What is a Private Key?](https://www.coinbase.com/learn/crypto-basics/what-is-a-private-key)
     -   [What is a Secret Phrase?](https://metamask.zendesk.com/hc/en-us/articles/360060826432-What-is-a-Secret-Recovery-Phrase-and-how-to-keep-your-crypto-wallet-secure)
 -   [Etherscan](https://etherscan.io/)
--   [Sepolia Etherscan](https://sepolia.etherscan.io/)
+-   [Sepolia Etherscan]( )
 -   Sepolia Faucet (Check the [link token contracts page](https://docs.chain.link/docs/link-token-contracts/#sepolia))
     -   NOTE: The Chainlink documentation always has the most up to date faucets on their [link token contracts page](https://docs.chain.link/docs/link-token-contracts/#sepolia). If the faucet above is broken, check the chainlink documentation for the most up to date faucet.
 -   OR, use the [Sepolia ETH Faucet](https://faucets.chain.link/), just be sure to swap your metamask to Sepolia!
@@ -589,32 +589,52 @@ Backup Faucet:<a href="https://sepoliafaucet.com/" target="_blank"> https://sepo
 *[⌨️ (01:05:32) How Do Blockchains Work](https://youtu.be/gyMwXuJrbJQ?t=3932)*
 - [What is a hash?](https://techjury.net/blog/what-is-cryptographic-hash/)
 - [Blockchain Demo](https://andersbrownworth.com/blockchain/)
+  - Genesis block: The first block in a blockchain 
+    - operating mechanisms of block, blockchain, distrbuted blockchain
+  - block: a list of transactions mined together 
+  - nonce: used to define the transaction number for an account/address
 - [Summary](https://ethereum.org/en/developers/docs/intro-to-ethereum/)
 
 ## Signing Transactions
 *[⌨️ (01:22:55) Signing Transactions](https://youtu.be/gyMwXuJrbJQ?t=4975)*
+
 -   [Public / Private Keys](https://andersbrownworth.com/blockchain/public-private-keys/keys)
+    - public keys is derived from one's private keys 
+    - private key -> public key -> address 
 -   [Layer 2 and Rollups](https://ethereum.org/en/developers/docs/scaling/layer-2-rollups/)
 -   [Decentralized Blockchain Oracles](https://blog.chain.link/what-is-the-blockchain-oracle-problem/)
 
 ## Gas II
 *[⌨️ (01:30:22) Gas II: Block Rewards & EIP 1559](https://youtu.be/gyMwXuJrbJQ?t=5422)*
--   [Block Rewards](https://www.investopedia.com/terms/b/block-reward.asp)
+- [Block Rewards](https://www.investopedia.com/terms/b/block-reward.asp)
+
 -   Advanced Gas
-    -   [EIP 1559](https://www.youtube.com/watch?v=MGemhK9t44Q)
+    - [EIP 1559](https://www.youtube.com/watch?v=MGemhK9t44Q)
+    
     -   GWEI, WEI, and ETH
+        
+        - 1 WEI = 10^9 GWEI
+        - Transaction fee = gas fees(to miners) + Burnt&Txn savings fees 
+        - **The sending transaction gets more expensive the more people use the chain because burnt increases**
+        
         -   [ETH Converter](https://eth-converter.com/)
 ## Gas II Summary
 *[⌨️ (01:36:44) Gas II Summary](https://youtu.be/gyMwXuJrbJQ?t=5804)*
+
 -   [Run Your Own Ethereum Node](https://geth.ethereum.org/docs/getting-started)
 
 ## High-Level Blockchain Fundamentals
 *[⌨️ (01:39:32) High-Level Blockchain Fundamentals]https://www.youtube.com/watch?v=gyMwXuJrbJQ&t=5972s()*
 -   [Consensus](https://wiki.polkadot.network/docs/learn-consensus)
--   [Proof of Stake](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/)
--   [Proof of Work](https://ethereum.org/en/developers/docs/consensus-mechanisms/pow/)
+    - Chain selection algorithm 
+    - Sybil Resistance mechanism -> defend against pseudo anonymous identities 
+-   [Proof of Stake](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/) 
+-   [Proof of Work(a Sybil resistance machanism)](https://ethereum.org/en/developers/docs/consensus-mechanisms/pow/)
 -   [Nakamoto Consensus](https://blockonomi.com/nakamoto-consensus/)
 -   [Ethereum 2 (the merge)](https://ethereum.org/en/eth2/)
+    - transform to proof of stake -> use much less energy 
+    - randomness solution 
+    - "sharding": solve scalability problem, increase number of users using the chain.  
 
 🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊 Completed Blockchain Basics! 🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊 
 
@@ -626,11 +646,13 @@ Backup Faucet:<a href="https://sepoliafaucet.com/" target="_blank"> https://sepo
 
 ## Introduction
 *[⌨️ (02:03:05) Introduction](https://youtu.be/gyMwXuJrbJQ?t=7385)*
+
 - [Remix](https://remix.ethereum.org/)
 - [Solidity Documentation](https://docs.soliditylang.org/en/latest/index.html)
 
 ## Setting Up Your First Contract
 *[⌨️ (02:05:18) Setting Up Your First Contract](https://youtu.be/gyMwXuJrbJQ?t=7518)*
+
 -   Versioning
 -   Take notes in your code!
 -   [What is a software license](https://snyk.io/learn/what-is-a-software-license/)
@@ -640,6 +662,7 @@ Backup Faucet:<a href="https://sepoliafaucet.com/" target="_blank"> https://sepo
 
 ## Basic Solidity: Types
 *[⌨️ (02:12:28) Basic Solidity Types](https://youtu.be/gyMwXuJrbJQ?t=7948)*
+
 -   [Types & Declaring Variables](https://docs.soliditylang.org/en/v0.8.13/)
     -   `uint256`, `int256`, `bool`, `string`, `address`, `bytes32`
     -   [Solidity Types](https://docs.soliditylang.org/en/latest/types.html)
@@ -688,11 +711,38 @@ Backup Faucet:<a href="https://sepoliafaucet.com/" target="_blank"> https://sepo
 
 ## Deploying your First Contract
 *[⌨️ (02:53:38) Deploying your First Contract](https://youtu.be/gyMwXuJrbJQ?t=10418)*
--   A testnet or mainnet
--   Connecting Metamask
--   [Find a faucet here](https://docs.chain.link/docs/link-token-contracts/#Sepolia)
--   See the faucets at the top of this readme!
--   Interacting with Deployed Contracts
+- A testnet or mainnet
+
+- Connecting Metamask
+
+- [Find a faucet here](https://docs.chain.link/docs/link-token-contracts/#Sepolia)
+
+- See the faucets at the top of this readme!
+
+- Interacting with Deployed Contracts
+
+  ```solidity
+  // SPDX-License-Identifier: MIT
+  pragma solidity >=0.8.7 <0.8.21;
+  
+  contract SimpleStorage {
+      // value types: boolean, uint, int, address, bytes
+      bool hasFavoriteNumber = true;
+      uint favoriteNumber = 123; //unit256 by default, 
+      //can hold the maximum 8-bit unsigned integer up to 2^n-1  
+      string favoriteNumberInText = "Five";
+      int favoriteInt = -5;
+      address myAddress = 0xb63a77825b9ebb80cf0cd89b80701f632e7db11a;
+      bytes32 favoriteBytes = "dog";
+  
+      function store(uint _favoriteNumber) public {
+          favoriteNumber = _favoriteNumber;
+      }
+  
+  }
+  ```
+
+  
 
 ## The EVM & A Recap of Lesson 2
 *[⌨️ (03:03:07) The EVM & A Recap of Lesson 2](https://youtu.be/gyMwXuJrbJQ?t=10987)*
@@ -706,6 +756,7 @@ Backup Faucet:<a href="https://sepoliafaucet.com/" target="_blank"> https://sepo
 
 ## Introduction
 *[⌨️ (03:06:06) Introduction](https://youtu.be/gyMwXuJrbJQ?t=11166)*
+
 - [Factory Pattern](https://betterprogramming.pub/learn-solidity-the-factory-pattern-75d11c3e7d29)
 
 ## Basic Solidity: Importing Contracts into other Contracts
@@ -1688,5 +1739,4 @@ Thanks to everyone who is taking, participating in, and working on this course. 
 [![Patrick Collins YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/channel/UCn-3f8tw_E1jZvhuHatROwA)
 [![Patrick Collins Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/patrickalphac/)
 [![Patrick Collins Medium](https://img.shields.io/badge/Medium-000000?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@patrick.collins_58673/)
-
 

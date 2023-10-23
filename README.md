@@ -742,9 +742,60 @@ Backup Faucet:<a href="https://sepoliafaucet.com/" target="_blank"> https://sepo
   }
   ```
 
+  ```solidity
+  pragma solidity >=0.8.8 <0.8.21
+  	uint256 favoriteNumber; // initialize a value of zero
   
+  function store(unit _favoriteNumber) public {
+  	favoriteNumber = _favoriteNumber;
+  }
+  ```
+  
+  The value of favoriteNumber is private, will not show from the transaction.
+  
+  ```solidity
+  pragma solidity >=0.8.8 <0.8.21
+  	uint256 public favoriteNumber; // initialize a value of zero
+  
+  function store(unit _favoriteNumber) public {
+  	favoriteNumber = _favoriteNumber;
+  
+  
+  
+  
+  }
+  ```
+  
+  ~value is public 
+  
+  ![image-20231021184541275](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20231021184541275.png)
 
-## The EVM & A Recap of Lesson 2
+```solidity
+// view, pure 
+function retrieve() public view returns(uint256) {
+	return favoriteNumber;
+}
+
+function add() public pure returns(uint256){
+    return(1 + 1);
+}
+```
+
+view functions disallow modification of state, only allowed to read and return the value stored in _favoriteNumber_.
+
+pure functions disallow read from _blockchain state_. 
+
+<u>No gas fee is required when calling these functions since there is no change in the state of the blockchain</u>				
+
+
+
+- function visibility 
+
+
+
+
+
+## The EVM ecap of Lesson 2
 *[⌨️ (03:03:07) The EVM & A Recap of Lesson 2](https://youtu.be/gyMwXuJrbJQ?t=10987)*
 -   The EVM
 

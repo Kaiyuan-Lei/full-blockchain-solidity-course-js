@@ -785,11 +785,41 @@ view functions disallow modification of state, only allowed to read and return t
 
 pure functions disallow read from _blockchain state_. 
 
-<u>No gas fee is required when calling these functions since there is no change in the state of the blockchain</u>				
+<u>*No gas fee is required when calling these functions since there is no change in the state of the blockchain*</u>				
+
+<u>*If a gas calling function calls a view or pure fucntion - only then will it cost gas*</u>
+
+- function visibility
+
+```solidity
+// in contract SimpleStorage{}..
+
+People public person = People({favoriteNumber: 2, name: "lky" })
+
+// uppercase P
+struct People {    
+	uint256 favoriteNumber;
+	string name;
+}
+
+```
+
+![image-20231022153759923](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20231022153759923.png)
+
+- array() 
+
+  ```solidity
+  //dynamic array -> size is not given -> add arbitrary number of people 
+  People[] public people;
+  // sized 
+  People[3] public people; 
+  
+  
+  ```
+
+  
 
 
-
-- function visibility 
 
 
 
@@ -797,6 +827,7 @@ pure functions disallow read from _blockchain state_.
 
 ## The EVM ecap of Lesson 2
 *[⌨️ (03:03:07) The EVM & A Recap of Lesson 2](https://youtu.be/gyMwXuJrbJQ?t=10987)*
+
 -   The EVM
 
 # Lesson 3: Remix Storage Factory
